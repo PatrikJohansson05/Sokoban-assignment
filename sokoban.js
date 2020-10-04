@@ -42,21 +42,27 @@ for (let y = 0; y < 16; y++) {
 
 console.log("x" + pos_X + "y" + pos_Y);
 
-function myFunction(e) {
+function myFunction () {
     var x = document.getElementById("name");
-
-    if (e.keyCode == 37) {
-        playerMove(-1, 0);
-    }
-    else if (e.keyCode == 38) {
-        playerMove(0, -1);
-    }
-    else if (e.keyCode == 39) {
-        playerMove(1, 0);
-    }
-    else if (e.keyCode == 40) {
-        playerMove(0, 1);
-    }
+    window.addEventListener('keydown', function (e){
+        switch (e.key) {
+            case 'ArrowUp':
+                e.preventDefault();
+                playerMove(0, -1);
+                break;
+            case 'ArrowDown':
+                e.preventDefault();
+                playerMove(0, 1);
+            case 'ArrowLeft':
+                e.preventDefault();
+                playerMove(0, -1);
+            case 'ArrowRight':
+                e.preventDefault();
+                playerMove(0, 1);
+            default:
+                break;
+        }
+    }, false);
     console.log("x" + pos_X + "y" + pos_Y);
 }
 
@@ -92,7 +98,7 @@ function playerMove(x_offset, y_offset) {
         {
             currentPlayerElement.classList.remove("Player");
             moveToElement.classList.add("Player");
-            currentPlayerElement.classList.add("Grass");
+            currentPlayerElement.classList.add("Space");
         }
         pos_X = pos_X + x_offset;
         pos_Y = pos_Y + y_offset;
