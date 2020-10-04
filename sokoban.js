@@ -53,12 +53,15 @@ function myFunction () {
             case 'ArrowDown':
                 e.preventDefault();
                 playerMove(0, 1);
+                break;
             case 'ArrowLeft':
                 e.preventDefault();
                 playerMove(0, -1);
+                break;
             case 'ArrowRight':
                 e.preventDefault();
                 playerMove(0, 1);
+                break;
             default:
                 break;
         }
