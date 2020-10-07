@@ -8,6 +8,10 @@
     margin: 0 auto;
     padding: 0;
 }
+.button{
+    position: center;
+    text-align: center;
+}
 .divBox
 {
     width: 48px;

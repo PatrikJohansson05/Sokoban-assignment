@@ -1,3 +1,4 @@
+"use strict";
 var myDiv = document.getElementById("myDiv");
 
 myDiv.innerHTML = "";
@@ -41,10 +42,11 @@ for (let y = 0; y < 16; y++) {
 }
 
 console.log("x" + pos_X + "y" + pos_Y);
-
+var start = document.getElementById("start");
+start.addEventListener('click', myFunction);
 function myFunction () {
     var x = document.getElementById("name");
-    window.addEventListener('keydown', function (e){
+    window.addEventListener('keyup', function (e){
         switch (e.key) {
             case 'ArrowUp':
                 e.preventDefault();
