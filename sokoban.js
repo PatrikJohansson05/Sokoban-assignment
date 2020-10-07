@@ -56,11 +56,11 @@ function myFunction () {
                 break;
             case 'ArrowLeft':
                 e.preventDefault();
-                playerMove(0, -1);
+                playerMove(-1, 0);
                 break;
             case 'ArrowRight':
                 e.preventDefault();
-                playerMove(0, 1);
+                playerMove(1, 0);
                 break;
             default:
                 break;
